@@ -19,22 +19,19 @@
         <link rel="next" href="../asphyxia/">
       
       
-        
-      
-      
       <link rel="icon" href="../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.21">
     
     
       
-        <title>Beginner Guide to Hex Editing - two-torial.xyz</title>
+        <title>Manually - two-torial.xyz</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2a3383ac.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -53,10 +50,26 @@
       
     
     
+      <link rel="stylesheet" href="../../style.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
+  
 
+
+  <script data-goatcounter="https://tuah-torial.goatcounter.com/count"
+        
+        
+        async src="//gc.zgo.at/count.js"></script>
+
+
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
     
     
   </head>
@@ -64,10 +77,12 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="indigo">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -76,7 +91,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#beginners-guide-to-hex-editing" class="md-skip">
+        <a href="#game-patching-hex-editing" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +109,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="two-torial.xyz" class="md-header__button md-logo" aria-label="two-torial.xyz" data-md-component="logo">
       
-  <img src="../../img/logo/website-logo.svg" alt="logo">
+  <img src="../../img/two-torial/website-logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -111,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Beginner Guide to Hex Editing
+              Manually
             
           </span>
         </div>
@@ -119,16 +134,92 @@
     </div>
     
       
+        <form class="md-header__option" data-md-component="palette">
+  
     
     
     
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
     
     
       <div class="md-header__source">
-        <a href="https://github.com/yxrei/two-torial/" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/two-torial/two-torial/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -163,17 +254,17 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="two-torial.xyz" class="md-nav__button md-logo" aria-label="two-torial.xyz" data-md-component="logo">
       
-  <img src="../../img/logo/website-logo.svg" alt="logo">
+  <img src="../../img/two-torial/website-logo.svg" alt="logo">
 
     </a>
     two-torial.xyz
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/yxrei/two-torial/" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/two-torial/two-torial/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -195,14 +286,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Home
-  
-
     
   </span>
-  
   
 
       </a>
@@ -233,14 +319,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Games
-  
-
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -249,11 +330,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    Games
-  
-
+            Games
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -280,14 +357,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
-    BEMANI
-  
-
+    KONAMI
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -296,11 +368,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    BEMANI
-  
-
+            KONAMI
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -327,14 +395,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
-    IIDX
-  
-
+    beatmania IIDX
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -343,11 +406,7 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1_1">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    IIDX
-  
-
+            beatmania IIDX
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -374,14 +433,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
-    IIDX 9th style
-  
-
+    9th style
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -390,11 +444,7 @@
         <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_1_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1_1_1">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    IIDX 9th style
-  
-
+            9th style
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -405,19 +455,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/iidx9/setup/" class="md-nav__link">
+      <a href="../../games/konami/iidx/9thstyle/setup/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    First Time Setup
-  
-
+    Game Setup
     
   </span>
-  
   
 
       </a>
@@ -433,19 +478,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/iidx9/problems/" class="md-nav__link">
+      <a href="../../games/konami/iidx/9thstyle/troubleshooting/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    Common Problems/Tips
-  
-
+    Troubleshooting
     
   </span>
-  
   
 
       </a>
@@ -485,14 +525,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
-    IIDX 10th style
-  
-
+    10th style
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -501,11 +536,7 @@
         <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_1_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1_1_2">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    IIDX 10th style
-  
-
+            10th style
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -516,19 +547,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/iidx10/setup/" class="md-nav__link">
+      <a href="../../games/konami/iidx/10thstyle/setup/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    First Time Setup
-  
-
+    Game Setup
     
   </span>
-  
   
 
       </a>
@@ -544,19 +570,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/iidx10/problems/" class="md-nav__link">
+      <a href="../../games/konami/iidx/10thstyle/troubleshooting/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    Common Problems/Tips
-  
-
+    Troubleshooting
     
   </span>
-  
   
 
       </a>
@@ -596,14 +617,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
-    IIDX 11 IIDX RED
-  
-
+    11 RED
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -612,11 +628,7 @@
         <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_1_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1_1_3">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    IIDX 11 IIDX RED
-  
-
+            11 RED
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -627,19 +639,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/iidx11/setup/" class="md-nav__link">
+      <a href="../../games/konami/iidx/11_red/setup/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    First Time Setup
-  
-
+    Game Setup
     
   </span>
-  
   
 
       </a>
@@ -655,19 +662,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/iidx11/problems/" class="md-nav__link">
+      <a href="../../games/konami/iidx/11_red/troubleshooting/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    Common Problems/Tips
-  
-
+    Troubleshooting
     
   </span>
-  
   
 
       </a>
@@ -707,14 +709,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
-    IIDX 12 HAPPY SKY
-  
-
+    12 HAPPY SKY
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -723,11 +720,7 @@
         <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_1_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1_1_4">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    IIDX 12 HAPPY SKY
-  
-
+            12 HAPPY SKY
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -738,19 +731,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/iidx12/setup/" class="md-nav__link">
+      <a href="../../games/konami/iidx/12_happysky/setup/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    First Time Setup
-  
-
+    Game Setup
     
   </span>
-  
   
 
       </a>
@@ -766,19 +754,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/iidx12/problems/" class="md-nav__link">
+      <a href="../../games/konami/iidx/12_happysky/troubleshooting/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    Common Problems/Tips
-  
-
+    Troubleshooting
     
   </span>
-  
   
 
       </a>
@@ -818,14 +801,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
-    IIDX 13 DistorteD
-  
-
+    13 DistorteD
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -834,11 +812,7 @@
         <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_1_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1_1_5">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    IIDX 13 DistorteD
-  
-
+            13 DistorteD
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -849,19 +823,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/iidx13/setup/" class="md-nav__link">
+      <a href="../../games/konami/iidx/13_distorted/setup/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    First Time Setup
-  
-
+    Game Setup
     
   </span>
-  
   
 
       </a>
@@ -877,19 +846,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/iidx13/problems/" class="md-nav__link">
+      <a href="../../games/konami/iidx/13_distorted/troubleshooting/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    Common Problems/Tips
-  
-
+    Troubleshooting
     
   </span>
-  
   
 
       </a>
@@ -929,14 +893,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
-    IIDX 14 GOLD
-  
-
+    14 GOLD
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -945,11 +904,7 @@
         <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_1_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1_1_6">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    IIDX 14 GOLD
-  
-
+            14 GOLD
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -960,19 +915,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/iidx14/setup/" class="md-nav__link">
+      <a href="../../games/konami/iidx/14_gold/setup/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    First Time Setup
-  
-
+    Game Setup
     
   </span>
-  
   
 
       </a>
@@ -988,19 +938,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/iidx14/problems/" class="md-nav__link">
+      <a href="../../games/konami/iidx/14_gold/troubleshooting/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    Common Problems/Tips
-  
-
+    Troubleshooting
     
   </span>
-  
   
 
       </a>
@@ -1040,14 +985,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
-    IIDX 24 SINOBUZ
-  
-
+    16 EMPRESS
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1056,11 +996,7 @@
         <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_1_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1_1_7">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    IIDX 24 SINOBUZ
-  
-
+            16 EMPRESS
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1071,19 +1007,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/iidx24/setup/" class="md-nav__link">
+      <a href="../../games/konami/iidx/16_empress/setup/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    First Time Setup
-  
-
+    Game Setup
     
   </span>
-  
   
 
       </a>
@@ -1099,19 +1030,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/iidx24/problems/" class="md-nav__link">
+      <a href="../../games/konami/iidx/16_empress/extras/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    Common Problems/Tips
-  
-
+    Extra Information
     
   </span>
-  
   
 
       </a>
@@ -1127,19 +1053,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/iidx24/hexedits/" class="md-nav__link">
+      <a href="../../games/konami/iidx/16_empress/troubleshooting/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    Hex Edits
-  
-
+    Troubleshooting
     
   </span>
-  
   
 
       </a>
@@ -1179,14 +1100,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
-    IIDX 25 CANNON BALLERS
-  
-
+    24 SINOBUZ
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1195,11 +1111,7 @@
         <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_1_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1_1_8">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    IIDX 25 CANNON BALLERS
-  
-
+            24 SINOBUZ
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1210,19 +1122,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/iidx25/setup/" class="md-nav__link">
+      <a href="../../games/konami/iidx/24_sinobuz/setup/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    First Time Setup
-  
-
+    Game Setup
     
   </span>
-  
   
 
       </a>
@@ -1238,19 +1145,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/iidx25/problems/" class="md-nav__link">
+      <a href="../../games/konami/iidx/24_sinobuz/extras/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    Common Problems/Tips
-  
-
+    Extra Information
     
   </span>
-  
   
 
       </a>
@@ -1266,19 +1168,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/iidx25/hexedits/" class="md-nav__link">
+      <a href="../../games/konami/iidx/24_sinobuz/troubleshooting/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    Hex Edits
-  
-
+    Troubleshooting
     
   </span>
-  
   
 
       </a>
@@ -1318,14 +1215,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
-    IIDX 26 Rootage
-  
-
+    25 CANNON BALLERS
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1334,11 +1226,7 @@
         <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_1_9_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1_1_9">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    IIDX 26 Rootage
-  
-
+            25 CANNON BALLERS
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1349,19 +1237,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/iidx26/setup/" class="md-nav__link">
+      <a href="../../games/konami/iidx/25_cannonballers/setup/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    First Time Setup
-  
-
+    Game Setup
     
   </span>
-  
   
 
       </a>
@@ -1377,47 +1260,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/iidx26/problems/" class="md-nav__link">
+      <a href="../../games/konami/iidx/25_cannonballers/troubleshooting/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    Common Problems/Tips
-  
-
+    Troubleshooting
     
   </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../games/iidx26/hexedits/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Hex Edits
-  
-
-    
-  </span>
-  
   
 
       </a>
@@ -1457,14 +1307,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
-    IIDX 27 HEROIC VERSE
-  
-
+    26 Rootage
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1473,11 +1318,7 @@
         <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_1_10_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1_1_10">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    IIDX 27 HEROIC VERSE
-  
-
+            26 Rootage
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1488,19 +1329,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/iidx27/setup/" class="md-nav__link">
+      <a href="../../games/konami/iidx/26_rootage/setup/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    First Time Setup
-  
-
+    Game Setup
     
   </span>
-  
   
 
       </a>
@@ -1516,47 +1352,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/iidx27/problems/" class="md-nav__link">
+      <a href="../../games/konami/iidx/26_rootage/troubleshooting/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    Common Problems/Tips
-  
-
+    Troubleshooting
     
   </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../games/iidx27/lightning/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Lightning Mode Specifics
-  
-
-    
-  </span>
-  
   
 
       </a>
@@ -1596,14 +1399,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
-    IIDX 30 RESIDENT
-  
-
+    27 HEROIC VERSE
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1612,11 +1410,7 @@
         <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_1_11_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1_1_11">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    IIDX 30 RESIDENT
-  
-
+            27 HEROIC VERSE
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1627,19 +1421,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/iidx30/setup/" class="md-nav__link">
+      <a href="../../games/konami/iidx/27_heroicverse/setup/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    First Time Setup
-  
-
+    Game Setup
     
   </span>
-  
   
 
       </a>
@@ -1655,19 +1444,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/iidx30/problems/" class="md-nav__link">
+      <a href="../../games/konami/iidx/27_heroicverse/extras/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    Common Problems/Tips
-  
-
+    Extra Information
     
   </span>
-  
   
 
       </a>
@@ -1683,19 +1467,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/iidx30/lightning/" class="md-nav__link">
+      <a href="../../games/konami/iidx/27_heroicverse/troubleshooting/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    Lightning Mode (TDJ)
-  
-
+    Troubleshooting
     
   </span>
-  
   
 
       </a>
@@ -1735,14 +1514,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
-    IIDX 31 EPOLIS
-  
-
+    30 RESIDENT
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1751,11 +1525,7 @@
         <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_1_12_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1_1_12">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    IIDX 31 EPOLIS
-  
-
+            30 RESIDENT
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1766,19 +1536,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/iidx31/setup/" class="md-nav__link">
+      <a href="../../games/konami/iidx/30_resident/setup/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    First Time Setup
-  
-
+    Game Setup
     
   </span>
-  
   
 
       </a>
@@ -1794,19 +1559,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/iidx31/problems/" class="md-nav__link">
+      <a href="../../games/konami/iidx/30_resident/extras/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    Common Problems/Tips
-  
-
+    Extra Information
     
   </span>
-  
   
 
       </a>
@@ -1822,19 +1582,359 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/iidx31/lightning/" class="md-nav__link">
+      <a href="../../games/konami/iidx/30_resident/troubleshooting/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    Lightning Mode (TDJ)
-  
-
+    Troubleshooting
     
   </span>
   
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_1_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_1_13" id="__nav_2_1_1_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    31 EPOLIS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_1_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_1_13">
+            <span class="md-nav__icon md-icon"></span>
+            31 EPOLIS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/konami/iidx/31_epolis/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Game Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/konami/iidx/31_epolis/extras/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Extra Information
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/konami/iidx/31_epolis/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_1_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_1_14" id="__nav_2_1_1_14_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    32 Pinky Crush
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_1_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_1_14">
+            <span class="md-nav__icon md-icon"></span>
+            32 Pinky Crush
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/konami/iidx/32_pinkycrush/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Game Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/konami/iidx/32_pinkycrush/extras/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Extra Information
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/konami/iidx/32_pinkycrush/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_1_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_1_15" id="__nav_2_1_1_15_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    33 Sparkle Shower
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_1_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_1_15">
+            <span class="md-nav__icon md-icon"></span>
+            33 Sparkle Shower
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/konami/iidx/33_sparkleshower/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Game Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/konami/iidx/33_sparkleshower/extras/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Extra Information
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/konami/iidx/33_sparkleshower/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
   
 
       </a>
@@ -1882,14 +1982,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
-    SDVX
-  
-
+    Sound Voltex
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1898,11 +1993,7 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1_2">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    SDVX
-  
-
+            Sound Voltex
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1929,14 +2020,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
-    SDVX IV HEAVENLY HAVEN
-  
-
+    IV HEAVENLY HAVEN
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1945,11 +2031,7 @@
         <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_2_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1_2_1">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    SDVX IV HEAVENLY HAVEN
-  
-
+            IV HEAVENLY HAVEN
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1960,19 +2042,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/sdvx4/setup/" class="md-nav__link">
+      <a href="../../games/konami/sdvx/4_heavenlyhaven/setup/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    First Time Setup
-  
-
+    Game Setup
     
   </span>
-  
   
 
       </a>
@@ -1988,47 +2065,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/sdvx4/problems/" class="md-nav__link">
+      <a href="../../games/konami/sdvx/4_heavenlyhaven/troubleshooting/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    Common Problems/Tips
-  
-
+    Troubleshooting
     
   </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../games/sdvx4/hexedits/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Hex Edits
-  
-
-    
-  </span>
-  
   
 
       </a>
@@ -2068,14 +2112,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
-    SDVX VIVID WAVE
-  
-
+    V VIVID WAVE
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2084,11 +2123,7 @@
         <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1_2_2">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    SDVX VIVID WAVE
-  
-
+            V VIVID WAVE
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2099,19 +2134,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/sdvx5/setup/" class="md-nav__link">
+      <a href="../../games/konami/sdvx/5_vividwave/setup/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    First Time Setup
-  
-
+    Game Setup
     
   </span>
-  
   
 
       </a>
@@ -2127,47 +2157,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/sdvx5/problems/" class="md-nav__link">
+      <a href="../../games/konami/sdvx/5_vividwave/troubleshooting/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    Common Problems/Tips
-  
-
+    Troubleshooting
     
   </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../games/sdvx5/hexedits/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Hex Edits
-  
-
-    
-  </span>
-  
   
 
       </a>
@@ -2207,14 +2204,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
-    SDVX EXCEED GEAR
-  
-
+    VI EXCEED GEAR
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2223,11 +2215,7 @@
         <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_2_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1_2_3">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    SDVX EXCEED GEAR
-  
-
+            VI EXCEED GEAR
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2238,19 +2226,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/sdvx6/setup/" class="md-nav__link">
+      <a href="../../games/konami/sdvx/6_exceedgear/setup/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    First Time Setup
-  
-
+    Game Setup
     
   </span>
-  
   
 
       </a>
@@ -2266,19 +2249,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/sdvx6/problems/" class="md-nav__link">
+      <a href="../../games/konami/sdvx/6_exceedgear/extras/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    Common Problems/Tips
-  
-
+    Extra Information
     
   </span>
-  
   
 
       </a>
@@ -2294,19 +2272,129 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/sdvx6/valk/" class="md-nav__link">
+      <a href="../../games/konami/sdvx/6_exceedgear/troubleshooting/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    Valkyrie Model
-  
-
+    Troubleshooting
     
   </span>
   
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_2_4" id="__nav_2_1_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    VII NABLA
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            VII NABLA
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/konami/sdvx/7_nabla/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Game Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/konami/sdvx/7_nabla/extras/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Extra Information
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/konami/sdvx/7_nabla/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
   
 
       </a>
@@ -2354,14 +2442,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
-    Pop&apos;n
-  
-
+    pop'n music
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2370,11 +2453,7 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1_3">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    Pop&apos;n
-  
-
+            pop'n music
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2401,14 +2480,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
-    Pop&apos;n Usaneko
-  
-
+    Usaneko
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2417,11 +2491,7 @@
         <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_3_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1_3_1">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    Pop&apos;n Usaneko
-  
-
+            Usaneko
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2432,19 +2502,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/popnusaneko/setup/" class="md-nav__link">
+      <a href="../../games/konami/popn/usaneko/setup/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    First Time Setup
-  
-
+    Game Setup
     
   </span>
-  
   
 
       </a>
@@ -2460,47 +2525,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/popnusaneko/problems/" class="md-nav__link">
+      <a href="../../games/konami/popn/usaneko/troubleshooting/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    Common Problems/Tips
-  
-
+    Troubleshooting
     
   </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../games/popnusaneko/hexedits/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Hex Edits
-  
-
-    
-  </span>
-  
   
 
       </a>
@@ -2540,14 +2572,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
-    Pop&apos;n Peace
-  
-
+    peace
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2556,11 +2583,7 @@
         <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_3_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1_3_2">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    Pop&apos;n Peace
-  
-
+            peace
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2571,19 +2594,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/popnpeace/setup/" class="md-nav__link">
+      <a href="../../games/konami/popn/peace/setup/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    First Time Setup
-  
-
+    Game Setup
     
   </span>
-  
   
 
       </a>
@@ -2599,47 +2617,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/popnpeace/problems/" class="md-nav__link">
+      <a href="../../games/konami/popn/peace/troubleshooting/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    Common Problems/Tips
-  
-
+    Troubleshooting
     
   </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../games/popnpeace/hexedits/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Hex Edits
-  
-
-    
-  </span>
-  
   
 
       </a>
@@ -2679,14 +2664,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
-    HELLO Pop&apos;n
-  
-
+    Kaimei Riddles
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2695,11 +2675,7 @@
         <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_3_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1_3_3">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    HELLO Pop&apos;n
-  
-
+            Kaimei Riddles
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2710,19 +2686,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/hellopopn/setup/" class="md-nav__link">
+      <a href="../../games/konami/popn/kaimei_riddles/setup/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    First Time Setup
-  
-
+    Game Setup
     
   </span>
-  
   
 
       </a>
@@ -2738,19 +2709,106 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/hellopopn/problems/" class="md-nav__link">
+      <a href="../../games/konami/popn/kaimei_riddles/troubleshooting/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    Common Problems/Tips
-  
-
+    Troubleshooting
     
   </span>
   
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_3_4" id="__nav_2_1_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    UniLab
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            UniLab
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/konami/popn/unilab/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Game Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/konami/popn/unilab/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
   
 
       </a>
@@ -2798,14 +2856,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
-    DDR
-  
-
+    Dance Dance Revolution
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2814,11 +2867,7 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1_4">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    DDR
-  
-
+            Dance Dance Revolution
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2845,14 +2894,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
-    DDR Ace
-  
-
+    A20
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2861,11 +2905,7 @@
         <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_4_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1_4_1">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    DDR Ace
-  
-
+            A20
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2876,19 +2916,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/ddrace/setup/" class="md-nav__link">
+      <a href="../../games/konami/ddr/a20/setup/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    First Time Setup
-  
-
+    Game Setup
     
   </span>
-  
   
 
       </a>
@@ -2904,19 +2939,83 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/ddrace/problems/" class="md-nav__link">
+      <a href="../../games/konami/ddr/a20/troubleshooting/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    Common Problems/Tips
-  
-
+    Troubleshooting
     
   </span>
   
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_4_2" id="__nav_2_1_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    A20 PLUS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            A20 PLUS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/konami/ddr/a20plus/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Game Setup
+    
+  </span>
   
 
       </a>
@@ -2932,19 +3031,198 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/ddrace/hexedits/" class="md-nav__link">
+      <a href="../../games/konami/ddr/a20plus/troubleshooting/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    Hex Edits
-  
-
+    Troubleshooting
     
   </span>
   
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_4_3" id="__nav_2_1_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    A3
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            A3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/konami/ddr/a3/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Game Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/konami/ddr/a3/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_4_4" id="__nav_2_1_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    WORLD
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            WORLD
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/konami/ddr/world/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Game Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/konami/ddr/world/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
   
 
       </a>
@@ -2992,14 +3270,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
-    Jubeat
-  
-
+    jubeat
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -3008,11 +3281,7 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1_5">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    Jubeat
-  
-
+            jubeat
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -3039,14 +3308,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
-    Jubeat Clan
-  
-
+    festo
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -3055,11 +3319,7 @@
         <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_5_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1_5_1">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    Jubeat Clan
-  
-
+            festo
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -3070,22 +3330,25 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/jubeatclan/setup/" class="md-nav__link">
+      <a href="../../games/konami/jubeat/festo/setup/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    First Time Setup
-  
-
+    Game Setup
     
   </span>
   
-  
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -3097,23 +3360,64 @@
   
   
   
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_5_2" id="__nav_2_1_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Ave.
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Ave.
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../games/jubeatclan/problems/" class="md-nav__link">
+      <a href="../../games/konami/jubeat/avenue/setup/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    Common Problems/Tips
-  
-
+    Game Setup
     
   </span>
   
-  
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -3125,20 +3429,53 @@
   
   
   
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_5_3" id="__nav_2_1_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    beyond the Ave.
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            beyond the Ave.
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../games/jubeatclan/hexedits/" class="md-nav__link">
+      <a href="../../games/konami/jubeat/beyondtheavenue/setup/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    Hex Edits
-  
-
+    Game Setup
     
   </span>
-  
   
 
       </a>
@@ -3186,14 +3523,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     GITADORA
-  
-
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -3202,11 +3534,7 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1_6">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    GITADORA
-  
-
+            GITADORA
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -3233,14 +3561,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
-    GITADORA Matixx
-  
-
+    Matixx
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -3249,11 +3572,7 @@
         <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_6_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1_6_1">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    GITADORA Matixx
-  
-
+            Matixx
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -3264,19 +3583,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/gitamatixx/setup/" class="md-nav__link">
+      <a href="../../games/konami/gitadora/matixx/setup/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    First Time Setup
-  
-
+    Game Setup
     
   </span>
-  
   
 
       </a>
@@ -3292,47 +3606,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/gitamatixx/problems/" class="md-nav__link">
+      <a href="../../games/konami/gitadora/matixx/troubleshooting/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    Common Problems/Tips
-  
-
+    Troubleshooting
     
   </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../games/gitamatixx/hexedits/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Hex Edits
-  
-
-    
-  </span>
-  
   
 
       </a>
@@ -3372,14 +3653,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
-    GITADORA EXCHAIN
-  
-
+    EXCHAIN
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -3388,11 +3664,7 @@
         <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_6_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1_6_2">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    GITADORA EXCHAIN
-  
-
+            EXCHAIN
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -3403,19 +3675,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/exchain/setup/" class="md-nav__link">
+      <a href="../../games/konami/gitadora/exchain/setup/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    First Time Setup
-  
-
+    Game Setup
     
   </span>
-  
   
 
       </a>
@@ -3431,19 +3698,83 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/exchain/problems/" class="md-nav__link">
+      <a href="../../games/konami/gitadora/exchain/troubleshooting/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    Common Problems/Tips
-  
-
+    Troubleshooting
     
   </span>
   
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_6_3" id="__nav_2_1_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Fuzz-Up
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            Fuzz-Up
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/konami/gitadora/fuzzup/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Game Setup
+    
+  </span>
   
 
       </a>
@@ -3459,19 +3790,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/exchain/hexedits/" class="md-nav__link">
+      <a href="../../games/konami/gitadora/fuzzup/troubleshooting/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    Hex Edits
-  
-
+    Troubleshooting
     
   </span>
-  
   
 
       </a>
@@ -3519,14 +3845,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Reflec Beat
-  
-
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -3535,11 +3856,7 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1_7">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    Reflec Beat
-  
-
+            Reflec Beat
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -3566,14 +3883,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
-    Reflec Beat: Reflesia
-  
-
+    悠久のリフレシア (Reflesia)
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -3582,11 +3894,7 @@
         <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_7_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1_7_1">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    Reflec Beat: Reflesia
-  
-
+            悠久のリフレシア (Reflesia)
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -3597,19 +3905,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/reflesia/setup/" class="md-nav__link">
+      <a href="../../games/konami/reflecbeat/reflesia/setup/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    First Time Setup
-  
-
+    Game Setup
     
   </span>
-  
   
 
       </a>
@@ -3625,47 +3928,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/reflesia/problems/" class="md-nav__link">
+      <a href="../../games/konami/reflecbeat/reflesia/troubleshooting/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    Common Problems/Tips
-  
-
+    Troubleshooting
     
   </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../games/reflesia/hexedits/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Hex Edits
-  
-
-    
-  </span>
-  
   
 
       </a>
@@ -3713,14 +3983,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     NOSTALGIA
-  
-
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -3729,11 +3994,7 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1_8">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    NOSTALGIA
-  
-
+            NOSTALGIA
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -3760,14 +4021,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
-    Nostalgia FORTE
-  
-
+    FORTE
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -3776,11 +4032,7 @@
         <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_8_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1_8_1">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    Nostalgia FORTE
-  
-
+            FORTE
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -3791,19 +4043,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/nostforte/setup/" class="md-nav__link">
+      <a href="../../games/konami/nostalgia/forte/setup/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    First Time Setup
-  
-
+    Game Setup
     
   </span>
-  
   
 
       </a>
@@ -3819,47 +4066,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/nostforte/problems/" class="md-nav__link">
+      <a href="../../games/konami/nostalgia/forte/troubleshooting/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    Common Problems/Tips
-  
-
+    Troubleshooting
     
   </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../games/nostforte/hexedits/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Hex Edits
-  
-
-    
-  </span>
-  
   
 
       </a>
@@ -3899,14 +4113,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
-    Nostalgia Op.2
-  
-
+    Op.2
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -3915,11 +4124,7 @@
         <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_8_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1_8_2">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    Nostalgia Op.2
-  
-
+            Op.2
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -3930,19 +4135,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/nostop2/setup/" class="md-nav__link">
+      <a href="../../games/konami/nostalgia/op2/setup/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    First Time Setup
-  
-
+    Game Setup
     
   </span>
-  
   
 
       </a>
@@ -3958,47 +4158,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/nostop2/problems/" class="md-nav__link">
+      <a href="../../games/konami/nostalgia/op2/troubleshooting/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    Common Problems/Tips
-  
-
+    Troubleshooting
     
   </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../games/nostop2/hexedits/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Hex Edits
-  
-
-    
-  </span>
-  
   
 
       </a>
@@ -4046,14 +4213,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
-    BeatStream アニムトライヴ
-  
-
+    BeatStream
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -4062,11 +4224,45 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_9_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1_9">
             <span class="md-nav__icon md-icon"></span>
+            BeatStream
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_9_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_9_1" id="__nav_2_1_9_1_label" tabindex="0">
             
   
-    BeatStream アニムトライヴ
+  
+  <span class="md-ellipsis">
+    アニムトライヴ (Animutribe)
+    
+  </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_9_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_9_1">
+            <span class="md-nav__icon md-icon"></span>
+            アニムトライヴ (Animutribe)
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -4077,19 +4273,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/beatstreamfinal/setup/" class="md-nav__link">
+      <a href="../../games/konami/beatstream/animutribe/setup/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    First Time Setup
-  
-
+    Game Setup
     
   </span>
-  
   
 
       </a>
@@ -4105,19 +4296,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/beatstreamfinal/problems/" class="md-nav__link">
+      <a href="../../games/konami/beatstream/animutribe/troubleshooting/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    Common Problems/Tips
-  
-
+    Troubleshooting
     
   </span>
-  
   
 
       </a>
@@ -4126,29 +4312,9 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../games/beatstreamfinal/hexedits/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Hex Edits
-  
-
-    
-  </span>
-  
-  
-
-      </a>
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -4185,14 +4351,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
-    MÚSECA 1+1/2
-  
-
+    MÚSECA
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -4201,11 +4362,45 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_10_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1_10">
             <span class="md-nav__icon md-icon"></span>
+            MÚSECA
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_10_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_10_1" id="__nav_2_1_10_1_label" tabindex="0">
             
   
+  
+  <span class="md-ellipsis">
     MÚSECA 1+1/2
+    
+  </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_10_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_10_1">
+            <span class="md-nav__icon md-icon"></span>
+            MÚSECA 1+1/2
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -4216,19 +4411,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/musecafinal/setup/" class="md-nav__link">
+      <a href="../../games/konami/museca/1plushalf/setup/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    First Time Setup
-  
-
+    Game Setup
     
   </span>
-  
   
 
       </a>
@@ -4244,19 +4434,91 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/musecafinal/problems/" class="md-nav__link">
+      <a href="../../games/konami/museca/1plushalf/troubleshooting/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    Common Problems/Tips
-  
-
+    Troubleshooting
     
   </span>
   
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_11" id="__nav_2_1_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Mahjong Fight Girl
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_11">
+            <span class="md-nav__icon md-icon"></span>
+            Mahjong Fight Girl
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/konami/mfg/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Game Setup
+    
+  </span>
   
 
       </a>
@@ -4272,19 +4534,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/musecafinal/hexedits/" class="md-nav__link">
+      <a href="../../games/konami/mfg/troubleshooting/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    Hex Edits
-  
-
+    Troubleshooting
     
   </span>
-  
   
 
       </a>
@@ -4332,14 +4589,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     SEGA
-  
-
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -4348,11 +4600,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    SEGA
-  
-
+            SEGA
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -4379,14 +4627,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     CHUNITHM
-  
-
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -4395,11 +4638,7 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2_1">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    CHUNITHM
-  
-
+            CHUNITHM
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -4426,14 +4665,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
-    SUN PLUS
-  
-
+    CHUNITHM
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -4442,11 +4676,7 @@
         <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_1_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2_1_1">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    SUN PLUS
-  
-
+            CHUNITHM
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -4457,19 +4687,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/chunithmsunplus/setup/" class="md-nav__link">
+      <a href="../../games/sega/chunithm/chunithm/setup/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    First Time Setup
-  
-
+    Game Setup
     
   </span>
-  
   
 
       </a>
@@ -4485,19 +4710,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/chunithmsunplus/controllers/" class="md-nav__link">
+      <a href="../../games/sega/chunithm/chunithm/controllers/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
     Controllers
-  
-
     
   </span>
-  
   
 
       </a>
@@ -4513,19 +4733,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/chunithmsunplus/networks/" class="md-nav__link">
+      <a href="../../games/sega/chunithm/chunithm/c2c/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    Networks
-  
-
+    Cab-to-Cab
     
   </span>
-  
   
 
       </a>
@@ -4541,19 +4756,3855 @@
   
   
     <li class="md-nav__item">
-      <a href="../../games/chunithmsunplus/problems/" class="md-nav__link">
+      <a href="../../games/sega/chunithm/chunithm/troubleshooting/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    Common Problems/Tips
-  
-
+    Troubleshooting
     
   </span>
   
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_1_2" id="__nav_2_2_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    PLUS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            PLUS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/plus/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Game Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/plus/controllers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Controllers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/plus/c2c/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cab-to-Cab
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/plus/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_1_3" id="__nav_2_2_1_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    AIR
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            AIR
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/air/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Game Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/air/controllers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Controllers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/air/c2c/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cab-to-Cab
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/air/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_1_4" id="__nav_2_2_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    AIR PLUS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            AIR PLUS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/airplus/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Game Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/airplus/controllers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Controllers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/airplus/c2c/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cab-to-Cab
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/airplus/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_1_5" id="__nav_2_2_1_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    STAR
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            STAR
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/star/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Game Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/star/controllers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Controllers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/star/c2c/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cab-to-Cab
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/star/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_1_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_1_6" id="__nav_2_2_1_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    STAR PLUS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_1_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_1_6">
+            <span class="md-nav__icon md-icon"></span>
+            STAR PLUS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/starplus/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Game Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/starplus/controllers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Controllers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/starplus/c2c/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cab-to-Cab
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/starplus/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_1_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_1_7" id="__nav_2_2_1_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    AMAZON
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_1_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_1_7">
+            <span class="md-nav__icon md-icon"></span>
+            AMAZON
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/amazon/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Game Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/amazon/controllers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Controllers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/amazon/c2c/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cab-to-Cab
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/amazon/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_1_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_1_8" id="__nav_2_2_1_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    AMAZON PLUS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_1_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_1_8">
+            <span class="md-nav__icon md-icon"></span>
+            AMAZON PLUS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/amazonplus/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Game Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/amazonplus/controllers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Controllers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/amazonplus/c2c/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cab-to-Cab
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/amazonplus/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_1_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_1_9" id="__nav_2_2_1_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    CRYSTAL
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_1_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_1_9">
+            <span class="md-nav__icon md-icon"></span>
+            CRYSTAL
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/crystal/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Game Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/crystal/controllers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Controllers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/crystal/c2c/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cab-to-Cab
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/crystal/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_1_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_1_10" id="__nav_2_2_1_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    CRYSTAL PLUS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_1_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_1_10">
+            <span class="md-nav__icon md-icon"></span>
+            CRYSTAL PLUS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/crystalplus/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Game Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/crystalplus/controllers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Controllers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/crystalplus/c2c/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cab-to-Cab
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/crystalplus/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_1_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_1_11" id="__nav_2_2_1_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    PARADISE
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_1_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_1_11">
+            <span class="md-nav__icon md-icon"></span>
+            PARADISE
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/paradise/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Game Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/paradise/controllers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Controllers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/paradise/c2c/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cab-to-Cab
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/paradise/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_1_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_1_12" id="__nav_2_2_1_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    PARADISE LOST
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_1_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_1_12">
+            <span class="md-nav__icon md-icon"></span>
+            PARADISE LOST
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/paradiselost/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Game Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/paradiselost/controllers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Controllers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/paradiselost/c2c/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cab-to-Cab
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/paradiselost/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_1_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_1_13" id="__nav_2_2_1_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    NEW
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_1_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_1_13">
+            <span class="md-nav__icon md-icon"></span>
+            NEW
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/new/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Game Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/new/controllers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Controllers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/new/c2c/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cab-to-Cab
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/new/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_1_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_1_14" id="__nav_2_2_1_14_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    NEW PLUS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_1_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_1_14">
+            <span class="md-nav__icon md-icon"></span>
+            NEW PLUS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/newplus/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Game Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/newplus/controllers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Controllers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/newplus/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/newplus/c2c/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cab-to-Cab
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_1_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_1_15" id="__nav_2_2_1_15_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    SUN
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_1_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_1_15">
+            <span class="md-nav__icon md-icon"></span>
+            SUN
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/sun/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Game Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/sun/controllers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Controllers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/sun/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/sun/c2c/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cab-to-Cab
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_1_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_1_16" id="__nav_2_2_1_16_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    SUN PLUS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_1_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_1_16">
+            <span class="md-nav__icon md-icon"></span>
+            SUN PLUS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/sunplus/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Game Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/sunplus/controllers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Controllers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/sunplus/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/sunplus/c2c/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cab-to-Cab
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_1_17" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_1_17" id="__nav_2_2_1_17_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    LUMINOUS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_1_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_1_17">
+            <span class="md-nav__icon md-icon"></span>
+            LUMINOUS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/luminous/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Game Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/luminous/controllers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Controllers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/luminous/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/luminous/c2c/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cab-to-Cab
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_1_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_1_18" id="__nav_2_2_1_18_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    LUMINOUS PLUS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_1_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_1_18">
+            <span class="md-nav__icon md-icon"></span>
+            LUMINOUS PLUS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/luminousplus/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Game Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/luminousplus/controllers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Controllers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/luminousplus/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/luminousplus/c2c/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cab-to-Cab
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_1_19" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_1_19" id="__nav_2_2_1_19_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    VERSE
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_1_19_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_1_19">
+            <span class="md-nav__icon md-icon"></span>
+            VERSE
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/verse/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Game Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/verse/controllers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Controllers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/verse/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/verse/c2c/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cab-to-Cab
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_1_20" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_1_20" id="__nav_2_2_1_20_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    X-VERSE
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_1_20_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_1_20">
+            <span class="md-nav__icon md-icon"></span>
+            X-VERSE
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/x-verse/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Game Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/x-verse/controllers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Controllers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/x-verse/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/x-verse/c2c/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cab-to-Cab
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_1_21" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_1_21" id="__nav_2_2_1_21_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    X-VERSE-X
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_1_21_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_1_21">
+            <span class="md-nav__icon md-icon"></span>
+            X-VERSE-X
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/x-verse-x/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Game Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/x-verse-x/controllers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Controllers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/x-verse-x/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/chunithm/x-verse-x/c2c/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cab-to-Cab
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    maimai DX
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            maimai DX
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2_1" id="__nav_2_2_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    BUDDiES
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            BUDDiES
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/maimaidx/buddies/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Game Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/maimaidx/buddies/controllers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Controllers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/maimaidx/buddies/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2_2" id="__nav_2_2_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    BUDDiES PLUS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            BUDDiES PLUS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/maimaidx/buddiesplus/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Game Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/maimaidx/buddiesplus/controllers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Controllers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/maimaidx/buddiesplus/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2_3" id="__nav_2_2_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    PRiSM
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            PRiSM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/maimaidx/prism/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Game Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/maimaidx/prism/controllers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Controllers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/maimaidx/prism/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2_4" id="__nav_2_2_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    PRiSM PLUS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            PRiSM PLUS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/maimaidx/prismplus/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Game Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/maimaidx/prismplus/controllers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Controllers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/maimaidx/prismplus/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2_5" id="__nav_2_2_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    CiRCLE
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            CiRCLE
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/maimaidx/circle/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Game Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/maimaidx/circle/controllers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Controllers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/maimaidx/circle/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_3" id="__nav_2_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    O.N.G.E.K.I.
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            O.N.G.E.K.I.
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_3_1" id="__nav_2_2_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    bright MEMORY
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            bright MEMORY
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/ongeki/brightmemory/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Game Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/ongeki/brightmemory/controllers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Controllers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/ongeki/brightmemory/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/ongeki/brightmemory/c2c/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cab-to-Cab
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_3_2" id="__nav_2_2_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Re:Fresh
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Re:Fresh
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/ongeki/refresh/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Game Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/ongeki/refresh/controllers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Controllers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/ongeki/refresh/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/ongeki/refresh/c2c/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cab-to-Cab
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_4" id="__nav_2_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    WACCA
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            WACCA
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_4_1" id="__nav_2_2_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Reverse
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Reverse
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/wacca/reverse/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Game Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/sega/wacca/reverse/controllers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Controllers
+    
+  </span>
   
 
       </a>
@@ -4586,6 +8637,259 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    NAMCO
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            NAMCO
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_1" id="__nav_2_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Taiko no Tatsujin: Nijiiro
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Taiko no Tatsujin: Nijiiro
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/namco/taikonijiiro/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Game Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/namco/taikonijiiro/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    TAITO
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            TAITO
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_1" id="__nav_2_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tetote X Connect
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Tetote X Connect
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/taito/tetoteconnect/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Game Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -4599,23 +8903,87 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../errorcodes/" class="md-nav__link">
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
-    
-  
     Error Codes
-  
-
     
   </span>
   
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Error Codes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../errorcodes/konami/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    KONAMI
+    
+  </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../errorcodes/sega/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SEGA
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -4645,14 +9013,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
-    Extras
-  
-
+    Game Patching
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -4661,13 +9024,32 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    Extras
-  
-
+            Game Patching
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../patchsp2x/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Using spice2x
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -4681,14 +9063,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
-    How to use Patcher Websites
-  
-
+    Using Web
     
   </span>
-  
   
 
       </a>
@@ -4718,14 +9095,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
-    Beginner Guide to Hex Editing
-  
-
+    Manually
     
   </span>
-  
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -4736,14 +9108,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
-    Beginner Guide to Hex Editing
-  
-
+    Manually
     
   </span>
-  
   
 
       </a>
@@ -4764,11 +9131,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#before-beginning" class="md-nav__link">
+  <a href="#preamble" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Before Beginning
-      
+      Preamble
     </span>
   </a>
   
@@ -4777,9 +9142,7 @@
         <li class="md-nav__item">
   <a href="#getting-started" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Getting Started
-      
+      Getting Started
     </span>
   </a>
   
@@ -4794,6 +9157,51 @@
 
               
             
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Extras
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Extras
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
               
                 
   
@@ -4806,154 +9214,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
-    How to setup Asphyxia CORE
-  
-
+    Asphyxia
     
   </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ascs/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Notes on the Most Common ASCs and Vendors
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../parts/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Arcade Parts List and Documentation
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../spiceguide/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    SpiceTools Usage, Parameters, and Functionality
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../spiceerrors/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    SpiceTools Error Messages
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../pollingrates/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    List of Touchscreen Monitors and their Polling Rates
-  
-
-    
-  </span>
-  
   
 
       </a>
@@ -4974,14 +9237,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
-    What is WASAPI and ASIO?
-  
-
+    Audio
     
   </span>
-  
   
 
       </a>
@@ -4997,19 +9255,106 @@
   
   
     <li class="md-nav__item">
-      <a href="../streamaudio/" class="md-nav__link">
+      <a href="../zerotier/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    Exclusive Audio Workarounds
-  
-
+    Cab-to-Cab (ZeroTier)
     
   </span>
   
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../controllers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Controllers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../datamods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Modding (Konami)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Modding (Unity)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux_konami/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linux (Konami)
+    
+  </span>
   
 
       </a>
@@ -5032,46 +9377,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../externalresources/" class="md-nav__link">
+      <a href="../../resources/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    
-  
-    External Resources
-  
-
+    Other Resources
     
   </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../about/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    About & Credits
-  
-
-    
-  </span>
-  
   
 
       </a>
@@ -5106,11 +9419,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#before-beginning" class="md-nav__link">
+  <a href="#preamble" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Before Beginning
-      
+      Preamble
     </span>
   </a>
   
@@ -5119,9 +9430,7 @@
         <li class="md-nav__item">
   <a href="#getting-started" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Getting Started
-      
+      Getting Started
     </span>
   </a>
   
@@ -5137,7 +9446,6 @@
           
           
             <div class="md-content" data-md-component="content">
-              
               <article class="md-content__inner md-typeset">
                 
                   
@@ -5147,49 +9455,66 @@
   
 
 
-<h1 id="beginners-guide-to-hex-editing">Beginner's Guide to Hex Editing</h1>
-<div class="admonition warning">
-<p class="admonition-title">Before reading:</p>
-<p>This section is for users that have never hex edited their game before, if you already know how to do this, nothing here will be of any use to you.</p>
+<h1 id="game-patching-hex-editing">Game Patching (hex editing)</h1>
+<div class="admonition danger">
+<p class="admonition-title">Before proceeding</p>
+<p><strong>This guide should ONLY be used as a last resort if all other methods fail.</strong><br />
+<strong>It has a high chance of breaking your game, make backups.</strong></p>
 </div>
-<h3 id="before-beginning">Before Beginning</h3>
+<h2 id="preamble">Preamble</h2>
 <div class="admonition tip">
-<p>There's several ways to apply hex edits to games, for the sake of this guide we'll demonstrate the manual way of doing edits to games in the event that the sites/services that simplify the process ever go down.</p>
-<p>We'll be using HxD to edit beatmania IIDX 25 CANNON BALLERS, the process is the same for any other game so this guide can work universally.</p>
+<p>We're going to patch Beatmania IIDX 25 CANNON BALLERS, however the process is similar for other BEMANI games.</p>
 <p>Here's what you'll need:</p>
 <ul>
-<li>Your favorite hex editor, such as <a href="https://mh-nexus.de/en/hxd/">HxD</a>.</li>
+<li>Your favorite hex editor, here we'll be using <a href="https://mh-nexus.de/en/hxd/">HxD</a>.</li>
 <li>A clean copy of your desired BEMANI game.</li>
-<li>A backup of your original <code>.dll</code> before editing in the event of any mistakes.</li>
+<li>A backup of your original <code>.dll</code> before editing.</li>
 </ul>
 </div>
-<h3 id="getting-started">Getting Started</h3>
+<h2 id="getting-started">Getting Started</h2>
 <div class="admonition tip">
-<p>So after downloading HxD or your preferred editor and deciding on what hex edits you want to apply, it's time to load it up for the first time. If you're using HxD, you'll be greeted with the screen below.</p>
+<p>Decide on what hex edits you want to apply, you may find that information from the community or our <a href="../../resources/">Resources</a>.</p>
+<p>It's time to open our hex editor. If you're using HxD, you'll be greeted with the screen below.</p>
 </div>
-<p><img src="/img/hexguide/1.png"></p>
+<p><img src="/img/extras/hexguide/1.webp"></p>
 <div class="admonition tip">
-<p>Open up the appropriate <code>.dll</code> file inside HxD that you wish to edit, for the grand majority of hex edits, this is the main game file, such as <code>bm2dx.dll</code>, <code>soundvoltex.dll</code>, and so on. Pictured below, I've opened up <code>bm2dx.dll</code> inside of HxD.</p>
+<p>Open your game's <code>.dll</code> file in the hex editor.</p>
+<p>For the grand majority of hex edits, this is the main game file, such as <code>bm2dx.dll</code>, <code>soundvoltex.dll</code>, etc.</p>
+<p>Pictured below, we've opened up <code>bm2dx.dll</code> inside HxD.</p>
 </div>
-<p><img src="/img/hexguide/2.png"></p>
-<div class="admonition warning">
-<p class="admonition-title">Please note:</p>
-<p>For demonstrative purposes, we're going to apply 1 edit to the game. The edit we'll be applying is EXCLUSIVE to this version of the game, meaning that it will not work on any other version of the game, nor any other games, because it's modifying specific addresses in memory that only apply to this specific version of the game.</p>
+<p><img src="/img/extras/hexguide/2.webp"></p>
+<div class="admonition danger">
+<p class="admonition-title">Attention</p>
+<p>The edit we'll be applying is <strong>EXCLUSIVE to this version of the game</strong> and serves as an example.</p>
+<p>This means it will not work on any other version of the game, nor any other game!<br />
+Hex edits modify specific memory addresses that only apply to very specific game versions.</p>
 </div>
 <div class="admonition tip">
-<p>The edit we've chosen to apply is <code>Unlock All Songs</code> and its edit is <code>0xB60B2: 74 10 -&gt; 90 90</code> so to start in HxD we're going to hit <code>Ctrl+G</code> to open the <code>Goto</code> window. From here, we'll input the offset <code>B60B2</code> inside the <code>Offset</code> section, as pictured, and hit OK.</p>
+<p>We'll be editing our game to <code>Unlock All Songs</code> and its edit is:</p>
+<ul>
+<li><strong>Offset</strong>: <code>0xB60B2</code></li>
+<li><strong>Original</strong>: <code>74 10</code></li>
+<li><strong>Modified</strong>: <code>90 90</code></li>
+</ul>
+<p>In HxD we're going to hit <code>Ctrl+G</code> to open the <code>Goto</code> window. </p>
+<p>From here, we'll input the offset <code>B60B2</code> in the <code>Offset</code> section as shown below, and hit <code>OK</code>.</p>
 </div>
-<p><img src="/img/hexguide/3.png"></p>
+<p><img src="/img/extras/hexguide/3.webp"></p>
 <div class="admonition tip">
-<p>Your cursor should be taken to the offset at the exact location you're ready to edit. As you can see, the numbers in front of you are <code>74</code> and <code>10</code> the same exact ones we need to replace! If they're not, it's likely you put in the wrong offset so be sure to double check.</p>
+<p>Our cursor should be taken to the offset at the exact location you want to edit.</p>
+<p>As you can see, the numbers in front of the cursor are <code>74</code> and <code>10</code> which corresponds to what we need to replace.</p>
+<p><strong>If there's a mismatch, it's likely the offset you've put in was wrong, so be sure to double check!</strong></p>
 </div>
-<p><img src="/img/hexguide/4.png"></p>
+<p><img src="/img/extras/hexguide/4.webp"></p>
 <div class="admonition tip">
-<p>From here, all we need to do is mouse over <code>74 10</code> and replace it with <code>90 90</code> you can do this by either manually typing <code>90 90</code> or by copy and pasting, it should look as it does below.</p>
+<p>Now all we need to do is select <code>74 10</code> and replace it with <code>90 90</code>.</p>
+<p>You can do this by either manually typing <code>90 90</code> or by copy and pasting.</p>
+<p>It should now look as shown below.</p>
 </div>
-<p><img src="/img/hexguide/5.png"></p>
+<p><img src="/img/extras/hexguide/5.webp"></p>
 <div class="admonition tip">
-<p>Once that's done, all you need to do is save the changes and repeat for every additional edit you want to do! The whole process is merely repeating by going to whichever offsets an edit requires and replacing the values in each location just as we did! Simple, right?</p>
+<p>Lastly, simply save your file and repeat these steps for any other edits you want to apply!</p>
+<p>If at any point your game has issues due to your edits, restore your backup.</p>
 </div>
 
 
@@ -5198,7 +9523,30 @@
 
 
 
+  
+    
+  
+  
 
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 30, 2025 18:38:36 UTC">May 30, 2025</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
 
 
 
@@ -5231,6 +9579,27 @@
   
 </div>
       
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://discord.gg/cZRUmEPK78" target="_blank" rel="noopener" title="Discord" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M492.5 69.8c-.2-.3-.4-.6-.8-.7-38.1-17.5-78.4-30-119.7-37.1-.4-.1-.8 0-1.1.1s-.6.4-.8.8c-5.5 9.9-10.5 20.2-14.9 30.6-44.6-6.8-89.9-6.8-134.4 0-4.5-10.5-9.5-20.7-15.1-30.6-.2-.3-.5-.6-.8-.8s-.7-.2-1.1-.2C162.5 39 122.2 51.5 84.1 69c-.3.1-.6.4-.8.7C7.1 183.5-13.8 294.6-3.6 404.2c0 .3.1.5.2.8s.3.4.5.6c44.4 32.9 94 58 146.8 74.2.4.1.8.1 1.1 0s.7-.4.9-.7c11.3-15.4 21.4-31.8 30-48.8.1-.2.2-.5.2-.8s0-.5-.1-.8-.2-.5-.4-.6-.4-.3-.7-.4c-15.8-6.1-31.2-13.4-45.9-21.9-.3-.2-.5-.4-.7-.6s-.3-.6-.3-.9 0-.6.2-.9.3-.5.6-.7c3.1-2.3 6.2-4.7 9.1-7.1.3-.2.6-.4.9-.4s.7 0 1 .1c96.2 43.9 200.4 43.9 295.5 0 .3-.1.7-.2 1-.2s.7.2.9.4c2.9 2.4 6 4.9 9.1 7.2.2.2.4.4.6.7s.2.6.2.9-.1.6-.3.9-.4.5-.6.6c-14.7 8.6-30 15.9-45.9 21.8-.2.1-.5.2-.7.4s-.3.4-.4.7-.1.5-.1.8.1.5.2.8c8.8 17 18.8 33.3 30 48.8.2.3.6.6.9.7s.8.1 1.1 0c52.9-16.2 102.6-41.3 147.1-74.2.2-.2.4-.4.5-.6s.2-.5.2-.8c12.3-126.8-20.5-236.9-86.9-334.5zm-302 267.7c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.4 59.2-52.8 59.2m195.4 0c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.2 59.2-52.8 59.2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/two-torial" target="_blank" rel="noopener" title="GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
     </div>
   </div>
 </footer>
@@ -5243,11 +9612,10 @@
     
     
       
-      
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
     
   </body>

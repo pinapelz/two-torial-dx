@@ -302,6 +302,7 @@ nav:
       - "Manually": "extras/hexguide.md"
   - Extras:
       - "Asphyxia": "extras/asphyxia.md"
+      - "MonkeyBusiness": "extras/monkeybusiness.md"
       - "Audio": "extras/audio.md"
       - "Cab-to-Cab (ZeroTier)": "extras/zerotier.md"
       - "Controllers": "extras/controllers.md"

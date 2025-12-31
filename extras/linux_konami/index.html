@@ -4158,6 +4158,98 @@
   
   
     <li class="md-nav__item">
+      <a href="../../games/konami/nostalgia/op3/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_8_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_8_3" id="__nav_2_1_8_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Op.3
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_8_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_8_3">
+            <span class="md-nav__icon md-icon"></span>
+            Op.3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../games/konami/nostalgia/op3/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Game Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../games/konami/nostalgia/op2/troubleshooting/" class="md-nav__link">
         
   
@@ -9241,6 +9333,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../monkeybusiness/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MonkeyBusiness
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../audio/" class="md-nav__link">
         
   
@@ -9758,7 +9873,7 @@ This guide will document the best currently known ways to get games working on L
 </tr>
 </tbody>
 </table>
-<p>This guide was primarily written targetting arch-based systems running KDE and pipewire.<br />
+<p>This guide was primarily written targeting arch-based systems running KDE and pipewire.<br />
 <strong>Instructions should still be distro and DE agnostic, but your mileage may vary.</strong></p>
 </div>
 <h2 id="pre-requisites">Pre-requisites</h2>
@@ -9779,7 +9894,7 @@ This guide will document the best currently known ways to get games working on L
 <summary>Extra requirements for NixOS</summary>
 <p><code>spice2x</code> requires an optional wine feature which NixOS does not enable by default.
 Apart from that, a patch for <code>winetricks</code> is needed due to <a href="https://github.com/NixOS/nixpkgs/issues/338367">weirdness with winetricks on NixOS with WoW64 wine</a>.</p>
-<p>To fix this, copy this to your confiuration:
+<p>To fix this, copy this to your configuration:
 <div class="language-nix highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>environment<span class="o">.</span><span class="ss">systemPackages</span> <span class="o">=</span> <span class="p">[</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  <span class="p">(</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    pkgs<span class="o">.</span>wine-with-pcsclite<span class="o">.</span>override <span class="p">{</span>
@@ -9822,7 +9937,7 @@ Apart from that, a patch for <code>winetricks</code> is needed due to <a href="h
 <div class="admonition tip">
 <ul>
 <li>Download the <code>sp2x-linux-setup.sh</code> script from <a href="https://gist.github.com/pinapelz/c7a399d4069827c7272e5dd4ab8ba2f6">gist/sp2x-linux-setup</a></li>
-<li>Place it next to your <code>📂contents</code> directory contaning compatible game files</li>
+<li>Place it next to your <code>📂contents</code> directory containing compatible game files</li>
 <li>Make the script executable <code>chmod +x sp2x-linux-setup.sh</code></li>
 <li>Run the script and follow instructions</li>
 </ul>
@@ -9845,7 +9960,7 @@ Instead we will later pass <code>-cfg</code> as a launch argument to the main sp
 <h3 id="wine-prefix">Wine prefix</h3>
 <div class="admonition danger">
 <p class="admonition-title">Double check commands</p>
-<p>We provide ready-made command for simplicity, however <strong>don't blindy copy and execute them</strong>.<br />
+<p>We provide ready-made command for simplicity, however <strong>don't blindly copy and execute them</strong>.<br />
 <strong>ALWAYS</strong> double check command before running them, and substitute <code>REPLACE_THIS_PATH</code> with your own location.</p>
 </div>
 <h4 id="initializing">Initializing</h4>
@@ -10025,7 +10140,7 @@ If you don't know how patches work, follow instructions in our <a href="../patch
 <hr />
 <ul>
 <li>
-<p>You need to set your monitor orientation to portait before playing</p>
+<p>You need to set your monitor orientation to portrait before playing</p>
 </li>
 <li>
 <p><strong>OR</strong> If you want to play the game windowed and keep your display in landscape orientation:</p>
@@ -10088,7 +10203,7 @@ If you don't know how patches work, follow instructions in our <a href="../patch
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 30, 2025 09:49:53 UTC">December 30, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 31, 2025 10:05:39 UTC">December 31, 2025</span>
   </span>
 
     

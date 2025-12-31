@@ -152,12 +152,10 @@
 
     Start the game by running `game.exe`/`game471.exe` or the newly made shortcut if you followed [the Locale Remulator part](#monitor-orientation).
 
-!!! tip ""
+!!! success "Setup Complete!"
 
     You're all done! The game should load up properly now.
   
-    As of now
-
 ## Connecting to a network
 !!! warning "Groove Coaster 4 will only connect to a network through ethernet"
     You must have a wired connection to connect to a network. Other adapters will not work.

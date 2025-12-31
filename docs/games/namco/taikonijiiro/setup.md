@@ -145,7 +145,7 @@
 
     **Elara Global Taiko Server**
 
-    [EGTS](https://webui.egts.ca/guide) is the only public Nijiiro server that also comes with an Omnimix verison that includes custom songs and songs from other Taiko games. 
+    [EGTS](https://webui.egts.ca/guide) is the only public Nijiiro server that also comes with an Omnimix version that includes custom songs and songs from other Taiko games. 
 
 ??? tip "Self Hosted Local Servers (Complex)"
 

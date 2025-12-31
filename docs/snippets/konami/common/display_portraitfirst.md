@@ -1,13 +1,13 @@
-!!! info "This game requires your main monitor to be set to `Portait` or `Portait (flipped)` mode"
+!!! info "This game requires your main monitor to be set to `Portrait` or `Portrait (flipped)` mode"
 
-??? tip "You will play in Portait mode (Recommended)"
+??? tip "You will play in Portrait mode (Recommended)"
 
     - Right click on your Desktop
     - Select `Display settings`
     - Look for `Display orientation` and set it to `Portrait` or `Portrait (flipped)`
     - Rotate your monitor 90°
 
-??? tip "You cannot play in Portait mode"
+??? tip "You cannot play in Portrait mode"
 
     In this case, your only option is to:
     

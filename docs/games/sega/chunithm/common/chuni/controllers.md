@@ -46,7 +46,7 @@
 
     - Install the [custom Host and LED firmware](https://pixeldrain.com/u/DajSPEoa) to your controller.
     Instructions on how to do so is provided in the linked archive.
-    - Download the TASOLLER IO DLL corrosponding to your firmware version and extract to your `App\bin` folder.
+    - Download the TASOLLER IO DLL corresponding to your firmware version and extract to your `App\bin` folder.
         - [chuniio-rs](https://gitea.tendokyu.moe/beerpsi/chuniio-rs/releases) (download `chuni.zip`)
     - Edit your `App\bin\segatools.ini` to reference the extracted DLLs:
 

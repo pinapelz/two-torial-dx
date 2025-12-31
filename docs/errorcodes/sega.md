@@ -8,14 +8,14 @@
 
 ### 0000
 
-!!! tip "Unexpected Error Occured"
+!!! tip "Unexpected Error Occurred"
 
     Data is corrupt, incomplete, or incorrectly modified.  
     Redownload data from trusted source.
 
 ### 0032
 
-!!! tip "Unexpected Error Occured"
+!!! tip "Unexpected Error Occurred"
 
     Generic network error with multiple symptoms, the most typical of which being enabling DHCP in Windows while the game expects a static IP.
     
@@ -95,7 +95,7 @@
 
 ### 4104
 
-!!! tip "Unexpected Error Occured"
+!!! tip "Unexpected Error Occurred"
 
     Make sure that the game files are not on the `E:` or `Y:` drive.  
     If that is already the case, check if the config files passed to AM Daemon exists and are valid JSON files:
@@ -119,7 +119,7 @@
 
 ### 4105
 
-!!! tip "Unexpected Error Occured"
+!!! tip "Unexpected Error Occurred"
 
     Check the AM Daemon window for any "runtime exception" messages, such as:
 

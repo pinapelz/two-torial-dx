@@ -117,7 +117,7 @@
     - You may or may not have more than one option. To figure out which one is your actual keyboard, select a device inside that list and press a button on the numpad.
     - Once you have found your correct device, the `Keyboard status` will change **(the number and location of the number does not matter, it only matters that it changed)**.
     - Grab your card, create a :material-file-document-edit:`.txt` and name it however you like. In this example it's called :material-file-document-edit:`card.txt`
-    - Place the file in a location that is easily accessible and you won't forget. In this case it's in a seperate folder.
+    - Place the file in a location that is easily accessible and you won't forget. In this case it's in a separate folder.
     
 !!! info "If you don't have a numpad, make sure to tick `Use top keyboard row for PIN pad input`. This will also change the `Card In` button to `Backspace`"
 

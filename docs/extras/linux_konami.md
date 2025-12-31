@@ -13,7 +13,7 @@
     | DanceDanceRevolution | `World` | |
     | Mahjong Fight Girl | | |
 
-    This guide was primarily written targetting arch-based systems running KDE and pipewire.  
+    This guide was primarily written targeting arch-based systems running KDE and pipewire.  
     **Instructions should still be distro and DE agnostic, but your mileage may vary.**
 
 ## Pre-requisites
@@ -33,7 +33,7 @@
     `spice2x` requires an optional wine feature which NixOS does not enable by default.
     Apart from that, a patch for `winetricks` is needed due to [weirdness with winetricks on NixOS with WoW64 wine](https://github.com/NixOS/nixpkgs/issues/338367).
 
-    To fix this, copy this to your confiuration:
+    To fix this, copy this to your configuration:
     ```nix
     environment.systemPackages = [
       (
@@ -78,7 +78,7 @@
 !!! tip ""
 
     - Download the `sp2x-linux-setup.sh` script from [gist/sp2x-linux-setup](https://gist.github.com/pinapelz/c7a399d4069827c7272e5dd4ab8ba2f6)
-    - Place it next to your `📂contents` directory contaning compatible game files
+    - Place it next to your `📂contents` directory containing compatible game files
     - Make the script executable `chmod +x sp2x-linux-setup.sh`
     - Run the script and follow instructions
 
@@ -104,7 +104,7 @@
 
 !!! danger "Double check commands"
 
-    We provide ready-made command for simplicity, however **don't blindy copy and execute them**.  
+    We provide ready-made command for simplicity, however **don't blindly copy and execute them**.  
     **ALWAYS** double check command before running them, and substitute `REPLACE_THIS_PATH` with your own location.
 
 #### Initializing
@@ -292,7 +292,7 @@
 
         ---
 
-        - You need to set your monitor orientation to portait before playing
+        - You need to set your monitor orientation to portrait before playing
 
         - **OR** If you want to play the game windowed and keep your display in landscape orientation:
  

@@ -313,7 +313,7 @@
     - Switch your Laverita to IO mode. You can do so in ConfigApp
     found in the yuancon [discord](https://discord.gg/4ncuRrq).
     - Change the COM port of your controller. You can do so in
-    Device manager by looking for `USB Serial Device` you may need to unplug and replug your controller to properly idetify which one is the Laverita.
+    Device manager by looking for `USB Serial Device` you may need to unplug and replug your controller to properly identify which one is the Laverita.
     - Double click on it
     - Go to Port Settings
     - Click on Advanced

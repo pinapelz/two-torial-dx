@@ -245,7 +245,7 @@
 
 ### Taiko no Tatsujin
 
-!!! info "Many of these controllers offer different configurations. Make sure to pick the correct one for the plaform(s) you plan to play on"
+!!! info "Many of these controllers offer different configurations. Make sure to pick the correct one for the platform(s) you plan to play on"
 
 #### Arcade-accurate
 

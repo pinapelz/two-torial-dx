@@ -56,4 +56,4 @@
 
 !!! warning "AquaMai & worldlinkd"
 
-    These mods may not work with the MelonLoader compatiblity layer for BepInEx, and as such it's recommended to follow their respective guides.
+    These mods may not work with the MelonLoader compatibility layer for BepInEx, and as such it's recommended to follow their respective guides.

@@ -291,6 +291,8 @@ nav:
       - TAITO:
           - "Tetote X Connect":
               - "Game Setup": "games/taito/tetoteconnect/setup.md"
+          - "Groove Coaster 4MAX: Diamond Galaxy":
+              - "Game Setup": "games/taito/groovecoaster4/setup.md"
   - Error Codes:
       - KONAMI: "errorcodes/konami.md"
       - SEGA: "errorcodes/sega.md"

@@ -43,7 +43,7 @@
   
     - Head to the [BouncyTrippy GitHub](https://github.com/drmext/BounceTrippy/releases) and download the latest release (regardless of name)
     
-    !!! warning "be sure that you are downloading the built WebUI and **NOT** the Source Code."
+    !!! warning "Be sure that you are downloading the built WebUI and **NOT** the Source Code."
     
     - Extract the `webui` folder to the same place where MonkeyBusiness is
     

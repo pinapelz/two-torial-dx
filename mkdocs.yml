@@ -287,6 +287,9 @@ nav:
               - "Reverse":
                   - "Game Setup": "games/sega/wacca/reverse/setup.md"
                   - "Controllers": "games/sega/wacca/reverse/controllers.md"
+          - "Project DIVA Arcade":
+              - "Future Tone":
+                  - "Game Setup": "games/sega/projectdiva/futuretone/setup.md"
       - NAMCO:
           - "Taiko no Tatsujin: Nijiiro":
               - "Game Setup": "games/namco/taikonijiiro/setup.md"

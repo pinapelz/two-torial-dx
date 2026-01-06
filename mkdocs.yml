@@ -132,7 +132,7 @@ nav:
                   - "Troubleshooting": "games/konami/nostalgia/op3/troubleshooting.md"
               - "Op.3":
                   - "Game Setup": "games/konami/nostalgia/op3/setup.md"
-                  - "Troubleshooting": "games/konami/nostalgia/op2/troubleshooting.md"
+                  - "Troubleshooting": "games/konami/nostalgia/op3/troubleshooting.md"
           - "BeatStream":
               - "アニムトライヴ (Animutribe)":
                   - "Game Setup": "games/konami/beatstream/animutribe/setup.md"
@@ -296,6 +296,7 @@ nav:
               - "Game Setup": "games/taito/tetoteconnect/setup.md"
           - "Groove Coaster 4MAX: Diamond Galaxy":
               - "Game Setup": "games/taito/groovecoaster4/setup.md"
+              - "Extra Information": "games/taito/groovecoaster4/extras.md"
   - Error Codes:
       - KONAMI: "errorcodes/konami.md"
       - SEGA: "errorcodes/sega.md"

@@ -11,7 +11,7 @@
     It consists of two main components:
 
     - MonkeyBusiness: The server software itself, supports a wide variety of e-amusement games
-    - BouncyTrippy: A WebUI for viewing scores and other operations (limited game support)
+    - BounceTrippy: A WebUI for viewing scores and other operations (limited game support)
 
 ## Downloading MonkeyBusiness
 
@@ -41,7 +41,7 @@
 !!! tip ""
     > The WebUI setup portion of MonkeyBusiness is optional, you may skip it if you don't plan on using the WebUI.
   
-    - Head to the [BouncyTrippy GitHub](https://github.com/drmext/BounceTrippy/releases) and download the latest release (regardless of name)
+    - Head to the [BounceTrippy GitHub](https://github.com/drmext/BounceTrippy/releases) and download the latest release (regardless of name)
     
     !!! warning "Be sure that you are downloading the built WebUI and **NOT** the Source Code."
     

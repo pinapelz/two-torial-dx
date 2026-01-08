@@ -10,11 +10,12 @@
 <figure markdown>
 A compendium of information and guides about arcade games.  
 By the community, for the community.
-
 </figure>
 
 <hr>
-
+!!! info "This is a superset of the original TWO-TORIAL"
+    
+    Some past guides have been adjusted for a better reading experience, and more guides have been added.
 
 !!! warning "This site is by no means all-encompassing"
 

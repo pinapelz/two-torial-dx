@@ -150,7 +150,7 @@
 
     If you've followed all instructions correctly, you're ready to launch the game. Ensure the controller you configured in JConfig is connected in.
 
-    Start the game by running `game.exe`/`game471.exe` or the newly made shortcut if you followed [the Locale Remulator part](#monitor-orientation).
+    Start the game by running `game.exe`/`game471.exe` or the newly made shortcut if you followed the Locale Remulator part.
 
 !!! success "Setup Complete!"
 

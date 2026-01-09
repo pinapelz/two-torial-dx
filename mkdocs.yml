@@ -144,6 +144,9 @@ nav:
           - "Mahjong Fight Girl":
               - "Game Setup": "games/konami/mfg/setup.md"
               - "Troubleshooting": "games/konami/mfg/troubleshooting.md"
+          - "Polaris Chord":
+              - "Game Setup": "games/konami/polarischord/setup.md"
+              - "Troubleshooting": "games/konami/polarischord/troubleshooting.md"
       - SEGA:
           - "CHUNITHM":
               - "CHUNITHM":
@@ -326,6 +329,7 @@ not_in_nav: |
   games/konami/popn/common
   games/konami/jubeat/common
   games/konami/nostalgia/common
+  games/konami/polarischord/common
   games/sega/chunithm/common
   games/sega/maimaidx/common
   games/sega/ongeki/common

@@ -34,6 +34,10 @@
 
     There is currently no known fix for this, other than maybe playing in windowed mode, or using a desktop PC instead. 
 
+??? tip "I get `Network Error` when trying to card in"
+
+    Your network doesn't support this version of the game. If you are on Asphyxia double check that you have the correct plugin for your version.
+
 ### Performance
 
 !!! info "Check out spice2x's [PC optimization](https://github.com/spice2x/spice2x.github.io/wiki/PC-optimization) guide"

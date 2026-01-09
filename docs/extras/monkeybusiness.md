@@ -37,7 +37,7 @@
     ┣━ ▶️ start.sh 
     ```
 
-## Installing BouncyTrippy (WebUI)
+## Installing BounceTrippy (WebUI)
 !!! tip ""
     > The WebUI setup portion of MonkeyBusiness is optional, you may skip it if you don't plan on using the WebUI.
   

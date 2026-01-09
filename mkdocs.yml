@@ -129,7 +129,7 @@ nav:
                   - "Troubleshooting": "games/konami/nostalgia/forte/troubleshooting.md"
               - "Op.2":
                   - "Game Setup": "games/konami/nostalgia/op2/setup.md"
-                  - "Troubleshooting": "games/konami/nostalgia/op3/troubleshooting.md"
+                  - "Troubleshooting": "games/konami/nostalgia/op2/troubleshooting.md"
               - "Op.3":
                   - "Game Setup": "games/konami/nostalgia/op3/setup.md"
                   - "Troubleshooting": "games/konami/nostalgia/op3/troubleshooting.md"
@@ -325,6 +325,7 @@ not_in_nav: |
   games/konami/ddr/common
   games/konami/popn/common
   games/konami/jubeat/common
+  games/konami/nostalgia/common
   games/sega/chunithm/common
   games/sega/maimaidx/common
   games/sega/ongeki/common

@@ -1,6 +1,8 @@
 <img class="header-logo" src="/img/sega/projectdiva/futuretone/logo.webp">
 # Setup
 
+!!! info "This is an accelerated guide for playing online. See [AFT For Dummies](https://docs.google.com/document/d/1_2qbofpxz9dB7VgfS5WA1uahwE-jmQny55WEyCYedCQ/edit?tab=t.0) for a more in-depth guide."
+
 --8<-- "docs/snippets/common/data_warning.md"
 
 --8<-- "docs/snippets/sega/common/data_old.md"
@@ -27,7 +29,7 @@
     ```
 
 !!! warning ""
-    If your data does not have an `amfs` folder, you can still proceed with the guide. However, you may or may not experience issues with connecting to a network.
+    If your data does not have an `amfs` folder `ICF` files, you can still proceed with the guide. However, you may or may not experience issues with connecting to a network.
 
 
 ## Updating data
@@ -60,13 +62,16 @@
     📂AppData
     ```
 
+!!! warning ""
+    If your data does not have an `amfs` folder, create an empty folder named `amfs`
+
 !!! info "Option numbers don't always follow a sequential pattern<br>It's common to see the numbers jump, for example `M215` then `M220`"
 
 ## Installing PD-Loader and segatools
 
 !!! tip ""
 
-    1. Download the latest version of [PD-Loader](github.com/PDModdingCommunity/PD-Loader/releases/tag/latest) and extract the contents of the archive into `App`
+    1. Download the latest version of [PD-Loader](https://github.com/PDModdingCommunity/PD-Loader/releases/tag/latest) and extract the contents of the archive into `App`
     
     2. Download the segatools [PD-Loader plugin](https://files.catbox.moe/eises8.zip) and extract the contents of the archive into `App`
   
@@ -108,19 +113,6 @@
         ```
 
         If not, point those to their respective folders.
-
-    ??? tip "If you do not have an `amfs` folder"
-  
-        Disable the use of `vfs`
-
-        ```ini
-        [vfs]
-        amfs=.\
-        option=.\
-        appdata=.\
-        enable=0
-        ```
-
 
 === "[gpio]"
 
@@ -184,6 +176,12 @@
     Start the game by opening `diva.exe` (if its not open already), then press `Launch`
   
     Allow the game to load, it may take some time.
+    
+    ??? warning "Error 8005"
+        This is a known randomly occuring issue. Re-launching the game should resolve this.
+        
+    ??? warning "TOUCH PANEL NG"
+        Disable `vfs` in `segatools.ini` by finding the `[vfs]` section and setting `enable=0`, add a newline with this value if the enable value doesn't exist.
 
 
 --8<-- "docs/snippets/sega/common/success.md"
@@ -195,3 +193,5 @@
     PD-Loader is also very well documented. See the <a href="https://github.com/PDModdingCommunity/PD-Loader/wiki/3)-Usage,-Modules-(Costumes),-Troubleshooting#known-issues">Known Issues</a> for potential solutions.
   
     There are also additional resources available on the [Project DIVA Modding 2nd Discord Server](https://discord.gg/projectdiva)
+
+    [AFT For Dummies](https://docs.google.com/document/d/1_2qbofpxz9dB7VgfS5WA1uahwE-jmQny55WEyCYedCQ/edit?tab=t.0) also provides a set of common troubleshooting steps.

@@ -135,7 +135,7 @@
     After MonkeyBusiness is setup with the proper plugin for your game:
 
     - Open `spicecfg.exe` and head to the `Options` tab
-    - Under the `Network` category, set your `EA Service URL (-url)` to point to your asphyxia server, typically `http://localhost:8083/core`
+    - Under the `Network` category, set your `EA Service URL (-url)` to point to your asphyxia server, typically `http://localhost:8000/core`
 
 
 ## Installing VCRedist & DirectX

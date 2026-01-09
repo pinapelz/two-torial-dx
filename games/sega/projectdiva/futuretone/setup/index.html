@@ -4160,7 +4160,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../konami/nostalgia/op3/troubleshooting/" class="md-nav__link">
+      <a href="../../../../konami/nostalgia/op2/troubleshooting/" class="md-nav__link">
         
   
   
@@ -4629,6 +4629,98 @@
   
     <li class="md-nav__item">
       <a href="../../../../konami/mfg/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_12" id="__nav_2_1_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Polaris Chord
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_12">
+            <span class="md-nav__icon md-icon"></span>
+            Polaris Chord
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../konami/polarischord/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Game Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../konami/polarischord/troubleshooting/" class="md-nav__link">
         
   
   
@@ -9947,6 +10039,9 @@
 
 <p><img class="header-logo" src="/img/sega/projectdiva/futuretone/logo.webp"></p>
 <h1 id="setup">Setup</h1>
+<div class="admonition info">
+<p class="admonition-title">This is an accelerated guide for playing online. See <a href="https://docs.google.com/document/d/1_2qbofpxz9dB7VgfS5WA1uahwE-jmQny55WEyCYedCQ/edit?tab=t.0">AFT For Dummies</a> for a more in-depth guide.</p>
+</div>
 <div class="admonition danger">
 <p class="admonition-title">You must obtain clean, unmodified and complete data to proceed with our guides</p>
 <p><strong>Corrupted or incomplete files will cause unpredictable issues we can't cover.</strong><br />
@@ -9995,7 +10090,7 @@ SEGA games <strong>DO NOT</strong> like being extracted over old data!</p>
 </span></code></pre></div>
 </div>
 <div class="admonition warning">
-<p>If your data does not have an <code>amfs</code> folder, you can still proceed with the guide. However, you may or may not experience issues with connecting to a network.</p>
+<p>If your data does not have an <code>amfs</code> folder <code>ICF</code> files, you can still proceed with the guide. However, you may or may not experience issues with connecting to a network.</p>
 </div>
 <h2 id="updating-data">Updating data</h2>
 <div class="admonition tip">
@@ -10020,6 +10115,9 @@ Community-created options often use letters instead of numbers to differentiate 
 </span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>📂AppData
 </span></code></pre></div>
 </div>
+<div class="admonition warning">
+<p>If your data does not have an <code>amfs</code> folder, create an empty folder named <code>amfs</code></p>
+</div>
 <div class="admonition info">
 <p class="admonition-title">Option numbers don't always follow a sequential pattern<br>It's common to see the numbers jump, for example <code>M215</code> then <code>M220</code></p>
 </div>
@@ -10027,7 +10125,7 @@ Community-created options often use letters instead of numbers to differentiate 
 <div class="admonition tip">
 <ol>
 <li>
-<p>Download the latest version of <a href="github.com/PDModdingCommunity/PD-Loader/releases/tag/latest">PD-Loader</a> and extract the contents of the archive into <code>App</code></p>
+<p>Download the latest version of <a href="https://github.com/PDModdingCommunity/PD-Loader/releases/tag/latest">PD-Loader</a> and extract the contents of the archive into <code>App</code></p>
 </li>
 <li>
 <p>Download the segatools <a href="https://files.catbox.moe/eises8.zip">PD-Loader plugin</a> and extract the contents of the archive into <code>App</code></p>
@@ -10077,21 +10175,11 @@ Community-created options often use letters instead of numbers to differentiate 
 </span></code></pre></div>
 <p>If not, point those to their respective folders.</p>
 </div>
-<details class="tip">
-<summary>If you do not have an <code>amfs</code> folder</summary>
-<p>Disable the use of <code>vfs</code></p>
-<div class="language-ini highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">[vfs]</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="na">amfs</span><span class="o">=</span><span class="s">.</span>\
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="s">option=.</span>\
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="s">appdata=.</span>\
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="s">enable=0</span>
-</span></code></pre></div>
-</details>
 </div>
 <div class="tabbed-block">
 <div class="admonition tip">
-<div class="language-ini highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">[gpio]</span>
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="na">dipsw1</span><span class="o">=</span><span class="s">1</span>
+<div class="language-ini highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">[gpio]</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="na">dipsw1</span><span class="o">=</span><span class="s">1</span>
 </span></code></pre></div>
 <blockquote>
 <p>If you are NOT using the recommended segatools release, the [gpio] section in segatools has been renamed to [system] on newer versions</p>
@@ -10101,8 +10189,8 @@ Community-created options often use letters instead of numbers to differentiate 
 <div class="tabbed-block">
 <div class="admonition tip">
 <p>Ensure that <code>[gfx]</code> is disabled</p>
-<div class="language-ini highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">[gfx]</span>
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="na">enable</span><span class="o">=</span><span class="s">0</span>
+<div class="language-ini highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">[gfx]</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="na">enable</span><span class="o">=</span><span class="s">0</span>
 </span></code></pre></div>
 </div>
 </div>
@@ -10119,23 +10207,23 @@ Community-created options often use letters instead of numbers to differentiate 
 <li>Set <code>default</code> to the address provided by your network<br />
 <strong>Do not add <code>http://</code> or <code>https://</code> to the address!</strong></li>
 </ul>
-<div class="language-ini highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">[dns]</span>
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="na">default</span><span class="o">=</span><span class="s">network.example</span>
+<div class="language-ini highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">[dns]</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="na">default</span><span class="o">=</span><span class="s">network.example</span>
 </span></code></pre></div>
 <ul>
 <li>Then, head to the <code>[keychip]</code> section and add &amp; set <code>id</code> to the keychip ID provided by your network<br />
 <strong>Do not change the subnet from its default unless told to by your network!</strong></li>
 </ul>
-<div class="language-ini highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">[keychip]</span>
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="na">subnet</span><span class="o">=</span><span class="s">192.168.XXX.XXX</span>
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="na">id</span><span class="o">=</span><span class="s">A69E-XXXXXXXXXXX</span>
+<div class="language-ini highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">[keychip]</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="na">subnet</span><span class="o">=</span><span class="s">192.168.XXX.XXX</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="na">id</span><span class="o">=</span><span class="s">A69E-XXXXXXXXXXX</span>
 </span></code></pre></div>
 <ul>
 <li>Create a file named <code>aime.txt</code> inside <code>App\bin\DEVICE</code> and type in a 20-digit access code<br />
 If you don't already have one, simply make one up, just know <strong>it must not start with the number 3!</strong></li>
 </ul>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>📄aime.txt
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>    01234567890123456789
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>📄aime.txt
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>    01234567890123456789
 </span></code></pre></div>
 </details>
 <details class="tip">
@@ -10173,6 +10261,14 @@ If you don't know Japanese, <a href="https://lens.google/">Google Lens</a> is a 
 <p>If you've followed all instructions correctly, you're now finally ready to launch the game!</p>
 <p>Start the game by opening <code>diva.exe</code> (if its not open already), then press <code>Launch</code></p>
 <p>Allow the game to load, it may take some time.</p>
+<details class="warning">
+<summary>Error 8005</summary>
+<p>This is a known randomly occuring issue. Re-launching the game should resolve this.</p>
+</details>
+<details class="warning">
+<summary>TOUCH PANEL NG</summary>
+<p>Disable <code>vfs</code> in <code>segatools.ini</code> by finding the <code>[vfs]</code> section and setting <code>enable=0</code>, add a newline with this value if the enable value doesn't exist.</p>
+</details>
 </div>
 <div class="admonition success">
 <p class="admonition-title">You're all done! The game should load up properly now</p>
@@ -10186,6 +10282,7 @@ If you don't know Japanese, <a href="https://lens.google/">Google Lens</a> is a 
 <p>Make sure you've followed all steps correctly and also read other relevant guides.</p>
 <p>PD-Loader is also very well documented. See the <a href="https://github.com/PDModdingCommunity/PD-Loader/wiki/3)-Usage,-Modules-(Costumes),-Troubleshooting#known-issues">Known Issues</a> for potential solutions.</p>
 <p>There are also additional resources available on the <a href="https://discord.gg/projectdiva">Project DIVA Modding 2nd Discord Server</a></p>
+<p><a href="https://docs.google.com/document/d/1_2qbofpxz9dB7VgfS5WA1uahwE-jmQny55WEyCYedCQ/edit?tab=t.0">AFT For Dummies</a> also provides a set of common troubleshooting steps.</p>
 </div>
 
 
@@ -10207,7 +10304,7 @@ If you don't know Japanese, <a href="https://lens.google/">Google Lens</a> is a 
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 6, 2026 10:13:54 UTC">January 6, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 9, 2026 22:04:42 UTC">January 9, 2026</span>
   </span>
 
     

@@ -89,22 +89,23 @@
 
 === "Patches"
 
-  !!! warning "spice2x cannot patch Unity games, you should instead use a web-based patcher or use [other Unity modding methods](/extras/unity.md)
+    ??? warning "spice2x does not support patching Unity games, you should instead use a web-based patcher or use [other Unity modding methods](/extras/unity.md)"
 
 === "API"
 
 --8<-- "docs/snippets/konami/common/spicecfg_nochange.md"
 
-??? info "I am using `polaris-touch`"
-    - In `API TCP Port` enter `1337` (or some other port if its unavailable)
-    - Make sure to leave the password section blank
-    - Find your PC's IP address (will typically start with `192.168`)
-    - On your touchscreen device open [polaris-touch](http://girlsband.party/polaris-touch.html)
-    - Enter your IP and the port you set above as `IP:Port`, for example `192.168.1.1:1337`
-    
-    You will know you've done this correctly if the top of polaris-touch shows `CONNECTED`
-    
-    *The port will increase by 1 on polaris-touch UI, this is normal and expected*
+    ??? info "If you are using `polaris-touch`"
+        - In `API TCP Port` enter `1337` (or some other port if its unavailable)
+        - Make sure to leave the password section blank
+        - Find your PC's IP address (will typically start with `192.168`)
+        - On your touchscreen device open [polaris-touch](http://girlsband.party/polaris-touch.html)
+        - Enter your IP and the port you set above as `IP:Port`, for example `192.168.1.1:1337`
+        
+        You will know you've done this correctly if the top of polaris-touch shows `CONNECTED`
+        
+        *The port will increase by 1 on polaris-touch UI, this is normal and expected*
+
 
 === "Options"
 
@@ -122,7 +123,35 @@
 
 ## Configuring audio
 
---8<-- "docs/snippets/konami/common/setup_audio.md"
+!!! info "Check out our general [Audio](/extras/audio.md) guide to understand audio modes better, at least the TL;DR"
+
+!!! tip ""
+
+    - Open `spicecfg.exe`
+    - At the very top, click on `Shortcuts` then `Audio Playback Devices`
+    - In the popup window, right click on your default audio device, and click on `Properties`
+    - Go to the `Advanced` tab
+
+    Then, depending follow instructions for your desired audio mode:
+
+??? tip "Setup for WASAPI Exclusive (default)"
+
+    - Check both boxes under `Exclusive Mode`
+    - Open the `Default Format` dropdown
+    - Pick the `16 bit, 44100 Hz (CD Quality)` option, click `Apply` then `OK`
+
+??? tip "Setup for WASAPI Shared"
+
+    - Open the `Default Format` dropdown
+    - Pick the `16 bit, 48000 Hz (DVD Quality)` option, click `Apply` then `OK`
+    - Return to `spicecfg`, go to the `Patches` tab
+    - Following the [Unity modding guide](/extras/unity.md) and patch `Shared Mode WASAPI`
+
+??? tip "Setup for ASIO (requires specialized hardware)"
+
+    - Check both boxes under `Exclusive Mode`
+    - Open the `Default Format` dropdown
+    - Pick the `16 bit, 44100 Hz (CD Quality)` option, click `Apply` then `OK`
 
 ## Connecting to a network
 
